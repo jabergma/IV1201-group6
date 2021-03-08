@@ -1,0 +1,39 @@
+{
+  "name": "iv1201-group6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "dev": "nodemon server.js",
+    "sequelize:database2:migrate": "sequelize --options-path ./.sequelize-database2 --env database2 db:migrate",
+    "sequelize:database2:migrate:undo": "sequelize --options-path ./.sequelize-database2 --env database2 db:migrate:undo",
+    "sequelize:database2:seed:all": "sequelize --options-path ./.sequelize-database2 --env database2 db:seed:all",
+    "database2:migration:seed:procedure": "npm run sequelize:database2:migrate && npm run sequelize:database2:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gits-15.sys.kth.se/joalunds/IV1201-Group6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bootstrap": "^4.6.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv-cli": "^4.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
